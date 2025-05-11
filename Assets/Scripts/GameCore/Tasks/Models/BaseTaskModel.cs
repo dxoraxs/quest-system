@@ -20,5 +20,4 @@ namespace QuestSystem.TaskModel
         public abstract void Start();
         public abstract void ReportProgress(TaskReportData taskReportData);
     }
-
 }

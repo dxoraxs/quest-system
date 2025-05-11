@@ -1,6 +1,8 @@
 ﻿using QuestSystem.Data;
 using QuestSystem.DI.Factories;
 using QuestSystem.GameCore;
+using QuestSystem.GameCore.Tasks;
+using QuestSystem.Tasks;
 using UnityEngine;
 using VContainer;
 using VContainer.Unity;
@@ -24,9 +26,14 @@ namespace QuestSystem.DI
             builder.RegisterInstance(_spawnContainer);
             
             builder.RegisterEntryPoint<GameTimerService>().As<IGameTimerService>();
+            
             builder.Register<KillableObjectRegistry>(Lifetime.Singleton);
             builder.Register<KillableObjectFactory>(Lifetime.Singleton);
             builder.Register<KillableObjectSpawner>(Lifetime.Singleton);
+
+            builder.Register<TaskFactory>(Lifetime.Singleton);
+            builder.Register<TaskManager>(Lifetime.Singleton);
+            builder.Register<TaskInstaller>(Lifetime.Singleton);
 
             builder.RegisterEntryPoint<GameController>();
         }

@@ -1,5 +1,6 @@
 ﻿using QuestSystem.GameCore;
 using UniRx;
+using UnityEngine;
 using UnityEngine.Scripting;
 
 namespace QuestSystem.TaskModel
@@ -27,6 +28,8 @@ namespace QuestSystem.TaskModel
             }
 
             base.ReportProgress(taskReportData);
+            
+            Debug.Log($"[DestroyTypeTaskModel] quest with type {_targetType}: {_currentCount} / {_targetCount}");
         }
     }
 

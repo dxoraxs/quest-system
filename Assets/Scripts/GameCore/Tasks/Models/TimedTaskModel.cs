@@ -34,8 +34,10 @@ namespace QuestSystem.TaskModel
                 return;
             }
             
-            _elapsedSeconds += Time.deltaTime;
+            _elapsedSeconds++;
             _progress.Value = Mathf.Clamp01(_elapsedSeconds / _durationSeconds);
+            
+            Debug.Log($"[TimedTaskModel] quest {_elapsedSeconds} / {_durationSeconds}");
 
             if (_elapsedSeconds >= _durationSeconds)
             {

@@ -29,6 +29,7 @@ namespace QuestSystem.TaskModel
 
             _currentCount++;
             _progress.Value = Mathf.Clamp01((float)_currentCount / _targetCount);
+            Debug.Log($"[DestroyAnyTaskModel] quest {_currentCount} / {_targetCount}");
 
             if (_currentCount >= _targetCount)
             {
