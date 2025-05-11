@@ -9,6 +9,8 @@ namespace QuestSystem.TaskModel
     {
         private readonly ObjectType _targetType;
 
+        public ObjectType TargetType => _targetType;
+        
         [Preserve]
         public DestroyTypeTaskModel(string description, ObjectType targetType, int targetCount)
             : base(description, targetCount)

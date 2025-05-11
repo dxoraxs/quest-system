@@ -9,6 +9,8 @@ namespace QuestSystem.TaskModel
     {
         protected readonly int _targetCount;
         protected int _currentCount;
+        
+        public int TargetCount => _targetCount;
 
         [Preserve]
         public DestroyAnyTaskModel(string description, int targetCount) : base(description)

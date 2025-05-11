@@ -12,6 +12,8 @@ namespace QuestSystem.TaskModel
         private readonly float _durationSeconds;
         private float _elapsedSeconds;
 
+        public float TargetDurationSeconds => _durationSeconds;
+        
         [Preserve]
         public TimedTaskModel(string description, float durationSeconds) : base(description)
         {
