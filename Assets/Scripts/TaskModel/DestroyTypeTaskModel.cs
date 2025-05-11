@@ -1,5 +1,6 @@
 ﻿using QuestSystem.GameCore;
 using UniRx;
+using UnityEngine.Scripting;
 
 namespace QuestSystem.TaskModel
 {
@@ -7,6 +8,7 @@ namespace QuestSystem.TaskModel
     {
         private readonly ObjectType _targetType;
 
+        [Preserve]
         public DestroyTypeTaskModel(string description, ObjectType targetType, int targetCount)
             : base(description, targetCount)
         {

@@ -3,6 +3,7 @@ using UniRx;
 using Cysharp.Threading.Tasks;
 using QuestSystem.GameCore;
 using UnityEngine;
+using UnityEngine.Scripting;
 
 namespace QuestSystem.TaskModel
 {
@@ -11,6 +12,7 @@ namespace QuestSystem.TaskModel
         private readonly float _durationSeconds;
         private float _elapsedSeconds;
 
+        [Preserve]
         public TimedTaskModel(string description, float durationSeconds) : base(description)
         {
             _durationSeconds = durationSeconds;

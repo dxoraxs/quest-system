@@ -19,7 +19,7 @@ namespace QuestSystem.GameCore
             Kill();
         }
 
-        public void Kill()
+        private void Kill()
         {
             OnKilled?.Invoke();
             Destroy(gameObject);

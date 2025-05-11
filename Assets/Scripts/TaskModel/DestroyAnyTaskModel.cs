@@ -1,6 +1,7 @@
 ﻿using QuestSystem.GameCore;
 using UniRx;
 using UnityEngine;
+using UnityEngine.Scripting;
 
 namespace QuestSystem.TaskModel
 {
@@ -9,6 +10,7 @@ namespace QuestSystem.TaskModel
         protected readonly int _targetCount;
         protected int _currentCount;
 
+        [Preserve]
         public DestroyAnyTaskModel(string description, int targetCount) : base(description)
         {
             _targetCount = targetCount;
